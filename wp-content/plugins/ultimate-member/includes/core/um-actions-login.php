@@ -15,15 +15,15 @@ function um_submit_form_errors_hook_login( $args ) {
 
 
 	if ( isset( $args['username'] ) && $args['username'] == '' ) {
-		UM()->form()->add_error( 'username', __( 'Please enter your username or email', 'ultimate-member' ) );
+		UM()->form()->add_error( 'username', __( 'Por favor informe seu nome de usuário ou e-mail ', 'ultimate-member' ) );
 	}
 
 	if ( isset( $args['user_login'] ) && $args['user_login'] == '' ) {
-		UM()->form()->add_error( 'user_login', __( 'Please enter your username', 'ultimate-member' ) );
+		UM()->form()->add_error( 'user_login', __( 'Por favor informe seu nome de usuário', 'ultimate-member' ) );
 	}
 
 	if ( isset( $args['user_email'] ) && $args['user_email'] == '' ) {
-		UM()->form()->add_error( 'user_email', __( 'Please enter your email', 'ultimate-member' ) );
+		UM()->form()->add_error( 'user_email', __( 'Por favor informe seu e-mail', 'ultimate-member' ) );
 	}
 
 	if ( isset( $args['username'] ) ) {
@@ -46,14 +46,14 @@ function um_submit_form_errors_hook_login( $args ) {
 	}
 
 	if ( $args['user_password'] == '' ) {
-		UM()->form()->add_error( 'user_password', __( 'Please enter your password', 'ultimate-member' ) );
+		UM()->form()->add_error( 'user_password', __( 'Por favor informe sua senha', 'ultimate-member' ) );
 	}
 
 	$user = get_user_by( 'login', $user_name );
 	if ( $user && wp_check_password( $args['user_password'], $user->data->user_pass, $user->ID ) ) {
 		UM()->login()->auth_id = username_exists( $user_name );
 	} else {
-		UM()->form()->add_error( 'user_password', __( 'Password is incorrect. Please try again.', 'ultimate-member' ) );
+		UM()->form()->add_error( 'user_password', __( 'Senha incorreta, tente novamente.', 'ultimate-member' ) );
 	}
 
 	$user = apply_filters( 'authenticate', null, $user_name, $args['user_password'] );

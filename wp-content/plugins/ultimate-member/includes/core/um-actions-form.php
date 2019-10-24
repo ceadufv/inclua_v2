@@ -366,7 +366,7 @@ function um_submit_form_errors_hook_( $args ) {
 	$um_profile_photo = um_profile('profile_photo');
 
 	if ( get_post_meta( $form_id, '_um_profile_photo_required', true ) && ( empty( $args['profile_photo'] ) && empty( $um_profile_photo ) ) ) {
-		UM()->form()->add_error('profile_photo', sprintf(__('%s is required.','ultimate-member'), 'Profile Photo' ) );
+		UM()->form()->add_error('profile_photo', sprintf(__('%s obrigatório(a).','ultimate-member'), 'Profile Photo' ) );
 	}
 
 	if ( ! empty( $fields ) ) {
@@ -413,15 +413,15 @@ function um_submit_form_errors_hook_( $args ) {
 			}
 
 			if ( isset( $array['type'] ) && $array['type'] == 'checkbox' && isset( $array['required'] ) && $array['required'] == 1 && !isset( $args[$key] ) ) {
-				UM()->form()->add_error($key, sprintf(__('%s is required.','ultimate-member'), $array['title'] ) );
+				UM()->form()->add_error($key, sprintf(__('%s obrigatório(a).','ultimate-member'), $array['title'] ) );
 			}
 
 			if ( isset( $array['type'] ) && $array['type'] == 'radio' && isset( $array['required'] ) && $array['required'] == 1 && !isset( $args[$key] ) && !in_array($key, array('role_radio','role_select') ) ) {
-				UM()->form()->add_error($key, sprintf(__('%s is required.','ultimate-member'), $array['title'] ) );
+				UM()->form()->add_error($key, sprintf(__('%s obrigatório(a).','ultimate-member'), $array['title'] ) );
 			}
 
 			if ( isset( $array['type'] ) && $array['type'] == 'multiselect' && isset( $array['required'] ) && $array['required'] == 1 && !isset( $args[$key] ) && !in_array($key, array('role_radio','role_select') ) ) {
-				UM()->form()->add_error($key, sprintf(__('%s is required.','ultimate-member'), $array['title'] ) );
+				UM()->form()->add_error($key, sprintf(__('%s obrigatório(a).','ultimate-member'), $array['title'] ) );
 			}
 
 			if ( $key == 'role_select' || $key == 'role_radio' ) {
@@ -460,7 +460,7 @@ function um_submit_form_errors_hook_( $args ) {
 						if( empty( $array['label'] ) ) {
 							UM()->form()->add_error($key, __('This field is required','ultimate-member') );
 						} else {
-							UM()->form()->add_error($key, sprintf( __('%s is required','ultimate-member'), $array['label'] ) );
+							UM()->form()->add_error($key, sprintf( __('%s obrigatório(a)','ultimate-member'), $array['label'] ) );
 						}
 					}
 				}
@@ -637,13 +637,13 @@ function um_submit_form_errors_hook_( $args ) {
 						case 'unique_username':
 
 							if ( $args[ $key ] == '' ) {
-								UM()->form()->add_error( $key, __( 'You must provide a username', 'ultimate-member' ) );
+								UM()->form()->add_error( $key, __( 'Informe um nome de usuário', 'ultimate-member' ) );
 							} elseif ( $mode == 'register' && username_exists( sanitize_user( $args[ $key ] ) ) ) {
-								UM()->form()->add_error( $key, __( 'Your username is already taken', 'ultimate-member' ) );
+								UM()->form()->add_error( $key, __( 'Nome de usuário em uso', 'ultimate-member' ) );
 							} elseif ( is_email( $args[ $key ] ) ) {
-								UM()->form()->add_error( $key, __( 'Username cannot be an email', 'ultimate-member' ) );
+								UM()->form()->add_error( $key, __( 'O de usuário não deve ser usado como e-mail', 'ultimate-member' ) );
 							} elseif ( ! UM()->validation()->safe_username( $args[$key] ) ) {
-								UM()->form()->add_error( $key, __( 'Your username contains invalid characters', 'ultimate-member' ) );
+								UM()->form()->add_error( $key, __( 'O nome de usuário contém caracteres inválidos', 'ultimate-member' ) );
 							}
 
 							break;
@@ -651,13 +651,13 @@ function um_submit_form_errors_hook_( $args ) {
 						case 'unique_username_or_email':
 
 							if ( $args[$key] == '' ) {
-								UM()->form()->add_error($key,  __('You must provide a username','ultimate-member') );
+								UM()->form()->add_error($key,  __('Informe um nome de usuário','ultimate-member') );
 							} else if ( $mode == 'register' && username_exists( sanitize_user( $args[$key] ) ) ) {
-								UM()->form()->add_error($key, __('Your username is already taken','ultimate-member') );
+								UM()->form()->add_error($key, __('Nome de usuário em uso','ultimate-member') );
 							} else if ( $mode == 'register' && email_exists( $args[$key] ) ) {
-								UM()->form()->add_error($key,  __('This email is already linked to an existing account','ultimate-member') );
+								UM()->form()->add_error($key,  __('E-mail vinculado a outra conta','ultimate-member') );
 							} else if ( ! UM()->validation()->safe_username( $args[$key] ) ) {
-								UM()->form()->add_error($key,  __('Your username contains invalid characters','ultimate-member') );
+								UM()->form()->add_error($key,  __('O nome de usuário contém caracteres inválidos','ultimate-member') );
 							}
 
 							break;
@@ -675,30 +675,30 @@ function um_submit_form_errors_hook_( $args ) {
 								$email_exists =  email_exists( $args[ $key ] );
 
 								if ( $args[ $key ] == '' && in_array( $key, array('user_email') ) ) {
-									UM()->form()->add_error( $key, __('You must provide your email','ultimate-member') );
+									UM()->form()->add_error( $key, __('Informe um e-mail','ultimate-member') );
 								} else if ( in_array( $mode, array('register') )  && $email_exists  ) {
-									UM()->form()->add_error($key, __('This email is already linked to an existing account','ultimate-member') );
+									UM()->form()->add_error($key, __('E-mail vinculado a outra conta','ultimate-member') );
 								} else if ( in_array( $mode, array('profile') )  && $email_exists && $email_exists != $args['user_id']  ) {
-									UM()->form()->add_error( $key, __('This email is already linked to an existing account','ultimate-member') );
+									UM()->form()->add_error( $key, __('E-mail vinculado a outra conta','ultimate-member') );
 								} else if ( !is_email( $args[ $key ] ) ) {
-									UM()->form()->add_error( $key, __('This is not a valid email','ultimate-member') );
+									UM()->form()->add_error( $key, __('E-mail inválido','ultimate-member') );
 								} else if ( ! UM()->validation()->safe_username( $args[ $key ] ) ) {
-									UM()->form()->add_error( $key,  __('Your email contains invalid characters','ultimate-member') );
+									UM()->form()->add_error( $key,  __('Seu e-mail contém caracteres inválidos','ultimate-member') );
 								}
 
 							} else {
 
 								if ( $args[ $key ] != '' && !is_email( $args[ $key ] ) ) {
-									UM()->form()->add_error( $key, __('This is not a valid email','ultimate-member') );
+									UM()->form()->add_error( $key, __('E-mail inválido','ultimate-member') );
 								} else if ( $args[ $key ] != '' && email_exists( $args[ $key ] ) ) {
-									UM()->form()->add_error($key, __('This email is already linked to an existing account','ultimate-member') );
+									UM()->form()->add_error($key, __('E-mail vinculado a outra conta','ultimate-member') );
 								} else if ( $args[ $key ] != '' ) {
 										
 									$users = get_users('meta_value='.$args[ $key ]);
 
 									foreach ( $users as $user ) {
 										if( $user->ID != $args['user_id'] ){
-											UM()->form()->add_error( $key, __('This email is already linked to an existing account','ultimate-member') );
+											UM()->form()->add_error( $key, __('E-mail vinculado a outra conta','ultimate-member') );
 										}
 									}
 
@@ -723,7 +723,7 @@ function um_submit_form_errors_hook_( $args ) {
 								$meta_key_exists = get_users( $args_unique_meta );
 
 								if ( $meta_key_exists ) {
-									UM()->form()->add_error( $key , __('You must provide a unique value','ultimate-member') );
+									UM()->form()->add_error( $key , __('Forneça um valor único','ultimate-member') );
 								}
 							}
 							break;
@@ -733,7 +733,7 @@ function um_submit_form_errors_hook_( $args ) {
 							if ( $args[ $key ] != '' ) {
 
 								if( ! ctype_alpha( str_replace(' ', '', $args[$key] ) ) ){
-									UM()->form()->add_error( $key , __('You must provide alphabetic letters','ultimate-member') );
+									UM()->form()->add_error( $key , __('Forneça letras alfabéticas','ultimate-member') );
 								}
 							}
 							break;
@@ -743,7 +743,7 @@ function um_submit_form_errors_hook_( $args ) {
 							if ( $args[ $key ] != '' ) {
 
 								if ( ! ctype_lower( str_replace(' ', '',$args[$key] ) ) ){
-									UM()->form()->add_error( $key , __('You must provide lowercase letters.','ultimate-member') );
+									UM()->form()->add_error( $key , __('Forneça letras minúsculas.','ultimate-member') );
 								}
 							}
 
@@ -761,7 +761,7 @@ function um_submit_form_errors_hook_( $args ) {
 
 				if ( $profile_show_bio ) {
 					if ( strlen( utf8_decode( str_replace( array( "\r\n", "\n", "\r\t", "\t" ), ' ', $args['description'] ) ) ) > $max_chars && $max_chars ) {
-						UM()->form()->add_error( 'description', sprintf( __( 'Your user description must contain less than %s characters', 'ultimate-member' ), $max_chars ) );
+						UM()->form()->add_error( 'description', sprintf( __( 'Sua descrição deve conter menos de %s caracteres', 'ultimate-member' ), $max_chars ) );
 					}
 				}
 
