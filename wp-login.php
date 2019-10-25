@@ -544,8 +544,14 @@ switch ( $action ) {
 			$redirect_to = $requested_redirect_to = $_REQUEST['redirect_to'];
 		} else {
 			/*$redirect_to           = 'wp-login.php?loggedout=true';*/
+
 			/** EDIÇÃO MOISES --- REDIRECIONAMENTO LOGOUT TELA INCLUA */
-			$redirect_to           = 'http://localhost/inclua_v2/';
+
+			//$redirect_to           = 'http://localhost/inclua_v2/';
+
+			define( 'NEWLINK', $_SERVER['HOST'] . '/inclua_v2' );
+			$redirect_to           = NEWLINK;
+
 			$requested_redirect_to = '';
 		}
 
