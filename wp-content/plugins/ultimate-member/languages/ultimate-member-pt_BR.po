@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Member\n"
 "POT-Creation-Date: 2019-10-29 14:18+0000\n"
-"PO-Revision-Date: 2019-10-29 14:57+0000\n"
+"PO-Revision-Date: 2019-10-31 12:14+0000\n"
 "Last-Translator: pedrosacramento <pedro.sacramento@gmail.com>\n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -737,12 +737,12 @@ msgstr ""
 #: includes/core/um-actions-form.php:476
 #, php-format
 msgid "Your %s must contain at least %s characters"
-msgstr ""
+msgstr "%s deve conter no mínimo %s caracteres"
 
 #: includes/core/um-actions-form.php:482
 #, php-format
 msgid "Your %s must contain less than %s characters"
-msgstr ""
+msgstr "%s deve conter no máximo %s caracteres"
 
 #: includes/core/um-actions-form.php:491
 msgid "You can not use HTML tags here"
@@ -754,6 +754,8 @@ msgid ""
 "Your password must contain at least one lowercase letter, one capital letter "
 "and one number"
 msgstr ""
+"Sua senha deve conter pelo menos 1 letra minúscula, 1 letra maiúscula e 1 "
+"número"
 
 #: includes/core/um-actions-form.php:504
 msgid "Please confirm your password"
@@ -3345,11 +3347,11 @@ msgstr ""
 
 #: includes/core/um-actions-account.php:58
 msgid "Your password must contain at least 8 characters"
-msgstr ""
+msgstr "Sua senha deve conter no mínimo 8 caracteres"
 
 #: includes/core/um-actions-account.php:62
 msgid "Your password must contain less than 30 characters"
-msgstr ""
+msgstr "Sua senha deve conter no máximo 30 caracteres"
 
 #: includes/core/um-actions-account.php:84
 msgid "Your username is invalid"
