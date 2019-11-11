@@ -20,19 +20,19 @@
 
 // ** Configurações do MySQL - Você pode pegar estas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define( 'DB_NAME', 'inclua_v2' );
+define('DB_NAME', 'teste_inclua');
 
 /** Usuário do banco de dados MySQL */
-define( 'DB_USER', 'root' );
+define('DB_USER', 'moises');
 
 /** Senha do banco de dados MySQL */
-define( 'DB_PASSWORD', '' );
+define('DB_PASSWORD', 'festadopeao2019');
 
 /** Nome do host do MySQL */
-define( 'DB_HOST', 'localhost' );
+define('DB_HOST', '200.235.252.219');
 
 /** Charset do banco de dados a ser usado na criação das tabelas. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define('DB_CHARSET', 'utf8');
 
 /** O tipo de Collate do banco de dados. Não altere isso se tiver dúvidas. */
 define('DB_COLLATE', '');
@@ -50,14 +50,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'UPsV)194uy~nyhc,U8T5C7W(!*5?%[f&%F >*No*f=*5?6^KphNiLOya%L9huplS' );
-define( 'SECURE_AUTH_KEY',  '6o!xN{CDk;H+w~9hhd[628M]Bkvyr*U*t04*=u+^1X1T`x(*ST&00.?+,of?g`45' );
-define( 'LOGGED_IN_KEY',    '?@xVI<^X#-.n`2V:Z</6rl;BJtblSa[GJ*sadGxzt*<`ic*LPJI@LMdJBePnHpVh' );
-define( 'NONCE_KEY',        'SX^YjG}kj 6$GUK.d)*9}M#VAo;>:T>3Uw+]th zg6X@89UK,j< z}kr@%1P% F[' );
-define( 'AUTH_SALT',        'W&Y$hG+k0AL6G=|Ue(3n(^pdb?vJ35rU-~@Gt$F1f*6gS(a:hhRXoD3w%v~>fHWy' );
-define( 'SECURE_AUTH_SALT', 'U>;.T{7v5G1/*Bo-$e??lYTTG?5HPi6A(Mx[)]?6O]el*@-<Wb%ldSYx>=~a@T9c' );
-define( 'LOGGED_IN_SALT',   'dZjG&%;6vHM~xt1d4vnELe7Fdv`@h3B~E;U6>{]Uh yl PMf [.I!^:7Jfdxj~H#' );
-define( 'NONCE_SALT',       'P)vm;aXUuL 5bQ_~]6cro23,2S9@kPg7ySSo2U*>*Vk`GmG-V|^io=?|C6bBQiD;' );
+define('AUTH_KEY',         'coloque a sua frase única aqui');
+define('SECURE_AUTH_KEY',  'coloque a sua frase única aqui');
+define('LOGGED_IN_KEY',    'coloque a sua frase única aqui');
+define('NONCE_KEY',        'coloque a sua frase única aqui');
+define('AUTH_SALT',        'coloque a sua frase única aqui');
+define('SECURE_AUTH_SALT', 'coloque a sua frase única aqui');
+define('LOGGED_IN_SALT',   'coloque a sua frase única aqui');
+define('NONCE_SALT',       'coloque a sua frase única aqui');
 
 /**#@-*/
 
