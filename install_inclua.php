@@ -145,7 +145,7 @@
             <h1 class="form-signin-heading" style="color: #cc3366">Sistema Inclua</h1>
             <h3 style="color: #777">Instalador</h3>
         </div>
-
+        
         <div class="wrapper">
             <form class="form-signin form-inline justify-content-center" action="install_inclua.php?acao=enviar" method="post">
 
@@ -153,25 +153,25 @@
                     <h4 style="color: #373278">Dados do banco:</h4>
                 </div>
                 
-                <input type="text" class="form-control" name="db_host" placeholder="Host" required autofocus />
-                <span title="Endereço de hospedagem do banco">
-                    &nbsp&nbsp<i class="fas fa-question-circle" style="color: #373278"></i>
-                </span>
+                <input type="text" class="form-control" name="db_host" placeholder="Host" required autofocus />&nbsp
+                <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Endereço de hospedagem do banco">
+                    <i class="fas fa-question-circle" style="color: #373278"></i>
+                </button>
                             
-                <input type="text" class="form-control" name="db_name" placeholder="Nome" required />
-                <span title="Nome do banco de dados ( já criado e hospedado )">
-                    &nbsp&nbsp<i class="fas fa-question-circle" style="color: #373278"></i>
-                </span>
+                <input type="text" class="form-control" name="db_name" placeholder="Nome" required />&nbsp
+                <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Nome do banco de dados ( já criado e hospedado )">
+                    <i class="fas fa-question-circle" style="color: #373278"></i>
+                </button>
             
-                <input type="text" class="form-control" name="db_user" placeholder="Usuário" required />
-                <span title="Nome do usuário que tem acesso ao banco">
-                    &nbsp&nbsp<i class="fas fa-question-circle" style="color: #373278"></i>
-                </span>
+                <input type="text" class="form-control" name="db_user" placeholder="Usuário" required />&nbsp
+                <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Nome do usuário que tem acesso ao banco">
+                    <i class="fas fa-question-circle" style="color: #373278"></i>
+                </button>
             
-                <input type="password" class="form-control" name="db_pass" placeholder="Senha" required />
-                <span title="Senha do usuário que tem acesso ao banco">
-                    &nbsp&nbsp<i class="fas fa-question-circle" style="color: #373278"></i>
-                </span>
+                <input type="password" class="form-control" name="db_pass" placeholder="Senha" required />&nbsp
+                <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Senha do usuário que tem acesso ao banco">
+                    <i class="fas fa-question-circle" style="color: #373278"></i>
+                </button>
 
                 <div class="pt-4">
                     <button class="btn btn-lg btn-primary" type="submit" style="background: #3ba1da">Instalar</button>
@@ -182,9 +182,15 @@
         <?php
         endif;
         ?>
-
         <script src="jquery/jquery-3.4.1.js" type="text/javascript"></script>
-        <script src="bootstrap-4.1.3/dist/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="bootstrap-4.1.3/site/docs/4.1/assets/js/vendor/popper.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function () {
+                 $('[data-toggle="tooltip"]').tooltip()
+            })
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+            })
+        </script>
+        <script src="bootstrap-4.1.3/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
     </body>
 </html>
