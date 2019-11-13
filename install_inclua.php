@@ -4,7 +4,7 @@
         <title>Instalador</title>
         <link href="bootstrap-4.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="fontawesome-5.11.2/css/all.css" rel="stylesheet" type="text/css"/>
-        <link href="replace.css" rel="stylesheet" type="text/css"/>
+        <link href="install_inclua.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <?php
@@ -107,7 +107,7 @@
 
                                     <h5 class="card-title" style="color: #373278">Sistema Inclua instalado com sucesso.</h5><br>
                                     <span class="pr-2">
-                                        <a href="replace.php" class="btn btn-secondary">Voltar</a>
+                                        <a href="install_inclua.php" class="btn btn-secondary">Voltar</a>
                                     </span>
                                     <a href="index.php" class="btn btn-primary" style="background: #3ba1da">Acessar o Inclua</a><br><br>
 
@@ -131,7 +131,7 @@
                                     <h5 class="card-title" style="color: #373278">Infelizmente não foi possível instalar o sistema Inclua.<br>
                                     Por favor, tente novamente.</h5>
                                     <span class="pr-2">
-                                        <a href="replace.php" class="btn btn-secondary">Voltar</a>
+                                        <a href="install_inclua.php" class="btn btn-secondary">Voltar</a>
                                     </span> 
 
                                 </div>
@@ -147,7 +147,7 @@
         </div>
 
         <div class="wrapper">
-            <form class="form-signin form-inline justify-content-center" action="replace.php?acao=enviar" method="post">
+            <form class="form-signin form-inline justify-content-center" action="install_inclua.php?acao=enviar" method="post">
 
                 <div class="p-3">
                     <h4 style="color: #373278">Dados do banco:</h4>
