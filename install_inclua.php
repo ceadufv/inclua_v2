@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Instalador</title>
+        <title>Sistema Inclua - Instalador</title>
         <link href="bootstrap-4.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="fontawesome-5.11.2/css/all.css" rel="stylesheet" type="text/css"/>
         <link href="install_inclua.css" rel="stylesheet" type="text/css"/>
@@ -125,14 +125,15 @@
                         <h3 style="color: #777">Instalador</h3>
                     </div>
                     <div class="container wrapper d-flex justify-content-center">
-                            <div class="card w-75 text-center">
+                            <div class="card w-50 text-center">
                                 <div class="card-body">
 
-                                    <h5 class="card-title" style="color: #373278">Infelizmente não foi possível instalar o sistema Inclua.<br>
-                                    Por favor, tente novamente.</h5>
-                                    <span class="pr-2">
+                                    <h5 class="card-title" style="color: #373278">Infelizmente não foi possível instalar o sistema Inclua.</h5>
+                                    <h5 style="color: #373278">Verifique os dados e tente novamente.</h5>
+                                    
+                                    <div class="p-3">
                                         <a href="install_inclua.php" class="btn btn-secondary">Voltar</a>
-                                    </span> 
+                                    </div> 
 
                                 </div>
                             </div>

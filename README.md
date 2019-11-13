@@ -1,6 +1,6 @@
 # Sistema Inclua - Versão 2.0
 
-### Instalação
+## Instalação
 Ao clonar/baixar o repositório para sua máquina é possível configurar o sistema de forma fácil ao acessar o arquivo pelo link:
 
 <p align="center">{host}/inclua_v2/install_inclua.php</p>
