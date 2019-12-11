@@ -154,22 +154,42 @@
                     <h4 style="color: #373278">Dados do banco:</h4>
                 </div>
                 
-                <input type="text" class="form-control" name="db_host" placeholder="Host" required autofocus />&nbsp
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-desktop"></i></span>
+                    </div>
+                    <input type="text" class="form-control" name="db_host" placeholder="Host" required autofocus />&nbsp
+                </div>
                 <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Endereço de hospedagem do banco">
                     <i class="fas fa-question-circle" style="color: #373278"></i>
                 </button>
-                            
-                <input type="text" class="form-control" name="db_name" placeholder="Nome" required />&nbsp
-                <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Nome do banco de dados ( já criado e hospedado )">
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-database">&nbsp</i></span>
+                    </div>            
+                    <input type="text" class="form-control" name="db_name" placeholder="Nome" required />&nbsp
+                </div>
+                <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Nome do banco de dados (já criado e hospedado)">
                     <i class="fas fa-question-circle" style="color: #373278"></i>
                 </button>
             
-                <input type="text" class="form-control" name="db_user" placeholder="Usuário" required />&nbsp
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user">&nbsp</i></span>
+                    </div>            
+                    <input type="text" class="form-control" name="db_user" placeholder="Usuário" required />&nbsp
+                </div>
                 <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Nome do usuário que tem acesso ao banco">
                     <i class="fas fa-question-circle" style="color: #373278"></i>
                 </button>
             
-                <input type="password" class="form-control" name="db_pass" placeholder="Senha" required />&nbsp
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-unlock">&nbsp</i></span>
+                    </div>   
+                    <input type="password" class="form-control" name="db_pass" placeholder="Senha" />&nbsp
+                </div>
                 <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="right" title="Senha do usuário que tem acesso ao banco">
                     <i class="fas fa-question-circle" style="color: #373278"></i>
                 </button>

@@ -11,6 +11,10 @@ body {
 	width: 40px;
 }
 
+.tool-tip [disabled] {
+	pointer-events: none;
+}
+
 .form-signin {
 	max-width: 380px;
 	padding: 15px 35px 45px;
